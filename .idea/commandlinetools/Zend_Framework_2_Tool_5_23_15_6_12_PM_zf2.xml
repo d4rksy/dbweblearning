@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.3.xsd" frameworkId="com.zend.framework2" name="Zend Framework 2 Tool_5/23/15 6:12 PM_zf2" invoke="php /home/darksy/Documents/dbms_zf2_doctrine2/vendor/zendframework/zftool/zf.php" alias="zf2" enabled="true" version="2" />
+
