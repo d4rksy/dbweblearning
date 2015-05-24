@@ -12,8 +12,8 @@ return array(
          *
          * for ZfcUser, this will be your default identity provider
          */
-        'identity_provider' => 'BjyAuthorize\Provider\Identity\ZfcUserZendDb',
-
+//        'identity_provider' => 'BjyAuthorize\Provider\Identity\ZfcUserZendDb',
+        'identity_provider' => 'DbmsAuth\Provider\Identity\DbmsIdentityProvider',
         /* If you only have a default role and an authenticated role, you can
          * use the 'AuthenticationIdentityProvider' to allow/restrict access
          * with the guards based on the state 'logged in' and 'not logged in'.
