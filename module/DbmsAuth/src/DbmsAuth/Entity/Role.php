@@ -6,7 +6,7 @@
  * @license http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace MyNamespace;
+namespace Dbms\Entity;
 
 use BjyAuthorize\Acl\HierarchicalRoleInterface;
 use Doctrine\ORM\Mapping as ORM;

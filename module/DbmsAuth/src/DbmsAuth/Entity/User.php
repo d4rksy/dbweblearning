@@ -6,7 +6,7 @@
  * Time: 7:05 PM
  */
 
-namespace DbmsAuth\Entities;
+namespace DbmsAuth\Entity;
 
 use BjyAuthorize\Provider\Role\ProviderInterface;
 use Doctrine\Common\Collections\ArrayCollection;

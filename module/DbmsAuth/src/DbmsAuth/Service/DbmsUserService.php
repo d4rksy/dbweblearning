@@ -5,13 +5,13 @@ namespace KaliUser\Service;
 use Zend\Crypt\Password\Bcrypt;
 use DbmsAuth\Entity\User;
 
-class UserService
+class DbmsUserService
 {
 
     /**
      * Static function for checking hashed passwords as required by Doctrine.
      *
-     * @param  AuthDoctrine\Entity\User   $user   Identity Object
+     * @param  DbmsAuth\Entity\User   $user   Identity Object
      * @param  string $passwordGiven Password to verify
      * @return boolean
      */

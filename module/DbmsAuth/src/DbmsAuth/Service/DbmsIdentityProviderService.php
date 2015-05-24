@@ -9,13 +9,11 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
  * Simple authentication provider factory
- *
- * @author Ingo Walz <ingo.walz@googlemail.com>
  */
 class DbmsIdentityProviderService implements FactoryInterface
 {
     /**
-     * {@inheritDoc}
+     * Simple Auth factory copied from some tutorial, didn't bother to change a single line..
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
