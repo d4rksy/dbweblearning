@@ -11,7 +11,7 @@ return array(
     'service_manager' => array(
         'factories' => array(
             'Zend\Authentication\AuthenticationService' => 'DbmsAuth\Service\Factory\AuthenticationFactory',
-            'DbmsAuth\Provider\Identity\DbmsIdentityProvider' => 'DbmsAuth\Service\DbmsProviderServiceFactory',
+            'DbmsAuth\Provider\Identity\IdentityProvider' => 'DbmsAuth\Service\Factory\ProviderServiceFactory',
         ),
         'invokables'  => array(
             'DbmsAuth\View\RedirectionStrategy' => 'DbmsAuth\View\RedirectionStrategy',

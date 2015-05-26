@@ -25,7 +25,7 @@ use Zend\Authentication\AuthenticationService;
  *
  * @author Ingo Walz <ingo.walz@googlemail.com>
  */
-class KaliIdentityProvider implements ProviderInterface
+class IdentityProvider implements ProviderInterface
 {
     /**
      * @var AuthenticationService

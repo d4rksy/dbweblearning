@@ -1,7 +1,7 @@
 <?php
 
 
-namespace DbmsAuth\Service;
+namespace DbmsAuth\Service\Factory;
 
 use BjyAuthorize\Provider\Identity\AuthenticationIdentityProvider;
 use Zend\ServiceManager\FactoryInterface;
@@ -10,7 +10,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 /**
  * Simple authentication provider factory
  */
-class DbmsIdentityProviderService implements FactoryInterface
+class ProviderServiceFactory implements FactoryInterface
 {
     /**
      * Simple Auth factory copied from some tutorial, didn't bother to change a single line..

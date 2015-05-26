@@ -18,4 +18,18 @@ class Module
             ),
         );
     }
+
+    public function getServiceConfig()
+    {
+        return array(
+            'aliases' => array(
+                'doctrine_em' => 'doctrine.entitymanager.orm_default'
+            ),
+            'invokables' => array(
+                'dbms_user_service' => 'DbmsAuth\Service\UserService'
+            )
+
+        );
+
+    }
 }

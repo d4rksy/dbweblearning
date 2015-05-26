@@ -13,7 +13,7 @@ return array(
          * for ZfcUser, this will be your default identity provider
          */
 //        'identity_provider' => 'BjyAuthorize\Provider\Identity\ZfcUserZendDb',
-        'identity_provider' => 'DbmsAuth\Provider\Identity\DbmsIdentityProvider',
+        'identity_provider' => 'DbmsAuth\Provider\Identity\IdentityProvider',
         /* If you only have a default role and an authenticated role, you can
          * use the 'AuthenticationIdentityProvider' to allow/restrict access
          * with the guards based on the state 'logged in' and 'not logged in'.
@@ -42,15 +42,10 @@ return array(
 
             // this will load roles from the user_role table in a database
             // format: user_role(role_id(varchar), parent(varchar))
-            'BjyAuthorize\Provider\Role\ZendDb' => array(
-                'table'             => 'user_role',
-                'role_id_field'     => 'role_id',
-                'parent_role_field' => 'parent',
-            ),
 
             // this will load roles from the 'BjyAuthorize\Provider\Role\Doctrine'
             // service
-            'BjyAuthorize\Provider\Role\Doctrine' => array(),
+            'BjyAuthorize\Provider\Role\ObjectRepositoryProvider' => array(),
         ),
 
         // resource providers provide a list of resources that will be tracked
@@ -93,21 +88,11 @@ return array(
              * You may omit the 'action' index to allow access to the entire controller
              */
             'BjyAuthorize\Guard\Controller' => array(
-                array('controller' => 'index', 'action' => 'index', 'roles' => array('guest','user')),
-                array('controller' => 'index', 'action' => 'stuff', 'roles' => array('user')),
+
+                array('controller' => 'Application\Controller\Index', 'roles' => array('guest', 'user'))
                 // You can also specify an array of actions or an array of controllers (or both)
                 // allow "guest" and "admin" to access actions "list" and "manage" on these "index",
                 // "static" and "console" controllers
-                array(
-                    'controller' => array('index', 'static', 'console'),
-                    'action' => array('list', 'manage'),
-                    'roles' => array('guest', 'admin')
-                ),
-                array(
-                    'controller' => array('search', 'administration'),
-                    'roles' => array('staffer', 'admin')
-                ),
-                array('controller' => 'zfcuser', 'roles' => array()),
                 // Below is the default index action used by the ZendSkeletonApplication
                 // array('controller' => 'Application\Controller\Index', 'roles' => array('guest', 'user')),
             ),
@@ -116,10 +101,6 @@ return array(
              * access to all routes unless they are specified here.
              */
             'BjyAuthorize\Guard\Route' => array(
-                array('route' => 'zfcuser', 'roles' => array('user')),
-                array('route' => 'zfcuser/logout', 'roles' => array('user')),
-                array('route' => 'zfcuser/login', 'roles' => array('guest')),
-                array('route' => 'zfcuser/register', 'roles' => array('guest')),
                 // Below is the default index action used by the ZendSkeletonApplication
                 array('route' => 'home', 'roles' => array('guest', 'user')),
             ),
